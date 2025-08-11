@@ -1,14 +1,13 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import { projectData, Project } from '../app/projectData';
 import { Box, Typography, ToggleButton, ToggleButtonGroup, Link } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
 export default function ProjectsGrid() {
-	const [images, setImages] = useState([]);
-	const [currFilter, setCurrFilter] = useState("All");
+	const [currFilter, setCurrFilter] = useState<string>("All");
 	const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectData);
-	const [firstLoad, setFirstLoad] = useState(true);
+	const [firstLoad, setFirstLoad] = useState<boolean>(true);
 	
 	// useEffect(() => {
 	// 	setImages(importImages(require.context('../../../public/images/projects', false, /\.(png|jpe?g|svg|webp)$/)));
@@ -29,13 +28,15 @@ export default function ProjectsGrid() {
 	// 	setProjectCards(tmpProjectCards);
 	// }, [images, filteredProjects, currFilter, firstLoad]);
 	
-	// const handleChange = (event, newFilter) => {
-	// 	setCurrFilter(newFilter);
+	const handleChange = (event: React.MouseEvent<HTMLElement>, newFilter: string) => {
+		const tempFilter = newFilter === null || newFilter === "" || newFilter === "All" ? "All" : newFilter;
 		
-	// 	setFilteredProjects(projectData.filter(project => project.primaryLanguages.includes(newFilter) || project.secondaryLanguages.includes(newFilter) || newFilter === "All"));
+		setCurrFilter(tempFilter);
 		
-	// 	setFirstLoad(false);
-	// };
+		setFilteredProjects(projectData.filter(project => project.primaryLanguages.includes(tempFilter) || project.secondaryLanguages.includes(tempFilter) || tempFilter === "All"));
+		
+		setFirstLoad(false);
+	};
 	
 	return (
 		<Box textAlign="center" marginTop="5em" id="projects">
@@ -50,7 +51,7 @@ export default function ProjectsGrid() {
 				color="primary"
 				value={currFilter}
 				exclusive
-				// onChange={handleChange}
+				onChange={handleChange}
 				aria-label="Platform"
 				className="hidden"
 			>
