@@ -1,42 +1,178 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-colour-list: 17, 52, 166;
+  --primary-colour: rgb(var(--primary-colour-list));
+  --box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+  --box-shadow-hover: 0 4px 6px 0 rgb(60 64 67 / 30%), 0 4px 9px 4px rgb(60 64 67 / 15%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: absolute;
+  z-index: 10;
+}
+
+#hero {
+  height: 90vh;
+  text-align: center;
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: linear-gradient(180deg, #0e5bda, #083a9b 60%, #072e82);
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+}
+
+.separator-box {
+  background-color: var(--primary-colour);
+  color: white;
+  padding: 7rem 1.5rem;
+}
+
+.pfp {
+  display: block;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 2rem;
+  border-radius: 0.7rem;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.rounded {
+  border-radius: 15px !important;
+}
+
+.MuiCard-root {
+  box-shadow: var(--box-shadow) !important;
+}
+
+.MuiCard-root:hover {
+  box-shadow: var(--box-shadow-hover) !important;
+  transform: scale(1.005);
+  transition: all .25s ease-in-out;
+}
+
+.MuiCardMedia-root {
+  box-shadow: var(--box-shadow);
+}
+
+.MuiCardActions-root {
+  box-shadow: var(--box-shadow);
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateY(50%);
+  transition: all .7s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.hidden:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.hidden:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.hidden:nth-child(4) {
+  transition-delay: 150ms;
+}
+
+.hidden:nth-child(5) {
+  transition-delay: 350ms;
+}
+
+.hidden:nth-child(6) {
+  transition-delay: 550ms;
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%)
+  }
+
+  100% {
+    transform: translateY(0%)
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.rubikscube__container {
+  width: 400px;
+  height: 400px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(6px);
+    /* move down */
+  }
+
+  60% {
+    transform: translateY(3px);
+    /* smaller bounce up */
   }
 }

@@ -2,19 +2,20 @@ import { Box, Container, Button, Link } from '@mui/material';
 
 export default function Navigation() {
 	const paddingTop = 2;
-	const paddingBottom = 4;
+	const paddingBottom = 1;
+	const paddingRight = 5;
 	
 	return (
-		<Container>
-			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'end', paddingTop: `${paddingTop}em`, paddingBottom: `${paddingBottom}em` }}>
+		<Container className='navbar' maxWidth={false}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'end', paddingTop: `${paddingTop}em`, paddingBottom: `${paddingBottom}em`, paddingRight: `${paddingRight}em` }}>
 				<Link href="#projects" underline="none">
-					<Button variant="text">My Projects</Button>
+					<Button variant="text" color="secondary">My Projects</Button>
 				</Link>
 				<Link href="#contact-me" underline="none">
-					<Button variant="text">Contact Me</Button>
+					<Button variant="text" color="secondary">Contact Me</Button>
 				</Link>
 				<Link href="/seangengecv.pdf" target="_blank" underline="none"sx={{marginLeft: '2em'}}>
-					<Button variant="outlined">Resume</Button>
+					<Button variant="outlined" color="secondary">Resume</Button>
 				</Link>
 			</Box>
 		</Container>
