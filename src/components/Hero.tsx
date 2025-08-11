@@ -7,24 +7,20 @@ import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrow
 export default function Hero() {
 	return (
 		<section id="hero" className='section-blue'>
-			<Grid container className="no-margin">
-				<Grid container size={5} justifyContent="center" alignItems="center">
+			<Grid container spacing={10} sx={{minHeight: '90vh'}} className='hidden'>
+				<Grid container size={6} alignItems="center" className='hidden'>
 					<RubiksCube moves={""} />
 				</Grid>
-				<Grid container justifyContent="center" alignItems="center">
-					<Grid size={12} className="hidden">
-						<Typography variant="h2">
-							Sean Genge
-						</Typography>
-						<Typography variant="body1">
-							A Full Stack Developer
-						</Typography>
-					</Grid>
-					<Grid size={12}>
-						<Link href="#projects" underline="none" className='hidden'>
-							<Button variant="outlined" color="secondary">View my projects</Button>
-						</Link>
-					</Grid>
+				<Grid container size={6} spacing={4} direction="column" justifyContent="center" alignItems="center" className='hidden'>
+					<Typography variant="h2">
+						Sean Genge
+					</Typography>
+					<Typography variant="body1">
+						A Full Stack Developer
+					</Typography>
+					<Link href="#projects" underline="none">
+						<Button variant="outlined" color="secondary">View my projects</Button>
+					</Link>
 				</Grid>
 			</Grid>
 			<Link href="#about-me">
@@ -34,6 +30,18 @@ export default function Hero() {
 					color: 'white'
 				}} />
 			</Link>
+			<svg
+				className="wave"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1440 320"
+			>
+				<path
+					fill="#072e82"  /* Your custom blue */
+					fillOpacity="1"
+					d="M0,224L48,224C96,224,192,224,288,213.3C384,203,480,181,576,160C672,139,768,117,864,101.3C960,85,1056,75,1152,80C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+				/>
+
+			</svg>
 		</section>
 	);
 }

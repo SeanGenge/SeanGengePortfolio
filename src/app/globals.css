@@ -64,22 +64,30 @@ html {
   border-radius: 15px !important;
 }
 
-.MuiCard-root {
+.project-card .MuiCard-root {
   box-shadow: var(--box-shadow) !important;
 }
 
-.MuiCard-root:hover {
+.project-card .MuiCard-root:hover {
   box-shadow: var(--box-shadow-hover) !important;
   transform: scale(1.005);
   transition: all .25s ease-in-out;
 }
 
-.MuiCardMedia-root {
+.project-card .MuiCardMedia-root {
   box-shadow: var(--box-shadow);
 }
 
-.MuiCardActions-root {
+.project-card .MuiCardActions-root {
   box-shadow: var(--box-shadow);
+}
+
+.wave {
+  position: absolute;
+  top: 98vh;
+  left: 0;
+  width: 100%;
+  transform: rotate(180deg);
 }
 
 .hidden {

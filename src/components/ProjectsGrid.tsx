@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import ProjectCard from "./ProjectCard";
-import { importImages } from '../util/util';
 import { projectData, Project } from '../app/projectData';
-import { Box, Typography, Container, ToggleButton, ToggleButtonGroup, Link } from '@mui/material';
+import { Box, Typography, ToggleButton, ToggleButtonGroup, Link } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
 export default function ProjectsGrid() {
@@ -39,7 +38,7 @@ export default function ProjectsGrid() {
 	// };
 	
 	return (
-		<Box textAlign="center" marginTop="5em">
+		<Box textAlign="center" marginTop="5em" id="projects">
 			<Typography variant="h3" className="hidden" sx={{marginBottom: "0.25em"}}>My Projects</Typography>
 			<Typography variant="body2" className="hidden" sx={{ marginBottom: "2em" }}>
 				You can view more of my projects on my
@@ -59,7 +58,7 @@ export default function ProjectsGrid() {
 				<ToggleButton value="React">React</ToggleButton>
 				<ToggleButton value="Node.js">Node.js</ToggleButton>
 			</ToggleButtonGroup>
-			<Grid container id="projects" justifyContent="center" alignItems="center" sx={{marginRight: '15rem', marginLeft: '15rem', marginTop: '1rem'}}>
+			<Grid container justifyContent="center" alignItems="center" sx={{marginRight: '15rem', marginLeft: '15rem', marginTop: '1rem'}}>
 				{filteredProjects.map((project, id) => (
 				<Grid className={"project-card " + (firstLoad ? "hidden" : "")} key={id}>
 					<Box display="flex" justifyContent="center" padding="1em">
