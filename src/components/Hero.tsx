@@ -16,7 +16,7 @@ export default function Hero() {
 						Sean Genge
 					</Typography>
 					<Typography variant="body1">
-						A Full Stack Developer
+						A Full Stack Developer with AI expertise
 					</Typography>
 					<Link href="#projects" underline="none">
 						<Button variant="outlined" color="secondary">View my projects</Button>
