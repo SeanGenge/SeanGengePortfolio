@@ -9,25 +9,6 @@ export default function ProjectsGrid() {
 	const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectData);
 	const [firstLoad, setFirstLoad] = useState<boolean>(true);
 	
-	// useEffect(() => {
-	// 	setImages(importImages(require.context('../../../public/images/projects', false, /\.(png|jpe?g|svg|webp)$/)));
-	// 	setFilteredProjects(projectData);
-	// }, []);
-	
-	// useMemo(() => {
-	// 	const tmpProjectCards = filteredProjects.map((project, id) => {
-	// 		return (
-	// 			<Grid className={"project-card " + (firstLoad ? "hidden" : "")} key={id}>
-	// 				<Box display="flex" justifyContent="center" padding="1em">
-	// 					<ProjectCard project={project} imageData={images[project.image]} />
-	// 				</Box>
-	// 			</Grid>
-	// 		);
-	// 	});
-		
-	// 	setProjectCards(tmpProjectCards);
-	// }, [images, filteredProjects, currFilter, firstLoad]);
-	
 	const handleChange = (event: React.MouseEvent<HTMLElement>, newFilter: string) => {
 		const tempFilter = newFilter === null || newFilter === "" || newFilter === "All" ? "All" : newFilter;
 		

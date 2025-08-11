@@ -7,7 +7,7 @@ export default function AboutMe() {
 	
 	return (
 		<Box id='about-me'>
-			<Container sx={{ marginTop: '5rem' }}>
+			<Container sx={{ marginTop: '5rem' }} className="hidden">
 				<Card className="rounded" sx={{ display: 'flex', flexDirection: 'row', position: 'relative', width: `${cardWidth}rem`, marginTop: '1em', marginBottom: '1em', marginLeft: '0.25em', marginRight: '0.25em' }}>
 					<CardMedia
 						sx={{ width: "70%", height: `${cardMediaHeight}rem`, margin: '1rem' }}
