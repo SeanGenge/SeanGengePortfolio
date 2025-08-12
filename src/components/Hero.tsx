@@ -7,11 +7,11 @@ import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrow
 export default function Hero() {
 	return (
 		<section id="hero" className='section-blue'>
-			<Grid container spacing={10} sx={{minHeight: '90vh', width: '100%'}} className='hidden hero-grid'>
-				<Grid container size={{ xs: 12, lg: 6 }} alignItems="center" className='hidden rubikscube__grid'>
+			<Grid container display="flex" alignItems="center" justifyContent="center" spacing={10} sx={{minHeight: '90vh', width: '100%'}} className='hidden hero-grid'>
+				<Grid container size={{ xs: 12, lg: 3 }} alignItems="center" className='hidden rubikscube__grid'>
 					<RubiksCube />
 				</Grid>
-				<Grid container size={{ xs: 8, lg: 6 }} spacing={4} direction="column" justifyContent="center" alignItems="center" className='hidden hero-title'>
+				<Grid container size={{ xs: 8, lg: 3 }} spacing={4} direction="column" justifyContent="center" alignItems="center" className='hidden hero-title'>
 					<Typography variant="h2">
 						Sean Genge
 					</Typography>
