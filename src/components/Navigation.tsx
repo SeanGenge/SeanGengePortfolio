@@ -7,7 +7,7 @@ export default function Navigation() {
 	
 	return (
 		<Container className='navbar' maxWidth={false}>
-			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'end', paddingTop: `${paddingTop}em`, paddingBottom: `${paddingBottom}em`, paddingRight: `${paddingRight}em` }}>
+			<Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'end', paddingTop: `${paddingTop}em`, paddingBottom: `${paddingBottom}em`, paddingRight: {xs: 0, sm: `${paddingRight}em`} }}>
 				<Link href="#projects" underline="none">
 					<Button variant="text" color="secondary">My Projects</Button>
 				</Link>

@@ -31,7 +31,7 @@ export default function ProjectCard({ project, imageData }: ProjectCardProps) {
 	const cardContentHeight = cardHeight - cardMediaHeight - 5;
 	
 	return (
-		<Card className="rounded project-card" sx={{ position: 'relative', width: `${cardWidth}rem`, minHeight: `${cardHeight}rem`, marginTop: '1em', marginBottom: '1em', marginLeft: '0.25em', marginRight: '0.25em' }}>
+		<Card className="rounded project-card" sx={{ position: 'relative', width: {xs: '100%', md: `${cardWidth}rem`}, minHeight: `${cardHeight}rem`, marginTop: '1em', marginBottom: '1em', marginLeft: {xs: 0, md: '0.25em'}, marginRight: {xs: 0, md: '0.25em'} }}>
 			{
 				image ?
 					<CardMedia

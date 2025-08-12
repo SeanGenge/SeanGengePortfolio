@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { TwistyPlayer } from 'cubing/twisty';
 
 export default function RubiksCube() {
@@ -18,7 +18,7 @@ export default function RubiksCube() {
 		const numTries: number = 3;
 		let currTry: number = 0;
 		
-		while (moves[randMoveIdx] === lastMove.current[0] || currTry > numTries) {
+		while (moves[randMoveIdx] === lastMove.current[0] && currTry < numTries) {
 			randMoveIdx = Math.floor(Math.random() * (moves.length - 0) + 0);
 			isDouble = Math.floor(Math.random() * (2 + 0) + 0) === 1 ? true : false;
 			isPrime = Math.floor(Math.random() * (2 + 0) + 0) === 1 ? true : false;
@@ -58,6 +58,6 @@ export default function RubiksCube() {
 	}, []);
 
 	return (
-		<div ref={cubeContainerRef} className='flex items-center justify-center' />
+		<div ref={cubeContainerRef} className='cube-container flex align-items justify-center' />
 	);
 }

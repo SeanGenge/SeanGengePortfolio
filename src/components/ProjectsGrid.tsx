@@ -40,10 +40,10 @@ export default function ProjectsGrid() {
 				<ToggleButton value="React">React</ToggleButton>
 				<ToggleButton value="Node.js">Node.js</ToggleButton>
 			</ToggleButtonGroup>
-			<Grid container justifyContent="center" alignItems="center" sx={{marginRight: '15rem', marginLeft: '15rem', marginTop: '1rem'}}>
+			<Grid container justifyContent="center" alignItems="center" sx={{marginRight: {xs: 0, lg: '15rem'}, marginLeft: {xs: 0, lg: '15rem'}, marginTop: '1rem'}}>
 				{filteredProjects.map((project, id) => (
 				<Grid className={"project-card " + (firstLoad ? "hidden" : "")} key={id}>
-					<Box display="flex" justifyContent="center" padding="1em">
+					<Box display="flex" justifyContent="center" padding={{xs: 0, md: "1em"}}>
 						<ProjectCard project={project} imageData={project.image} />
 					</Box>
 				</Grid>

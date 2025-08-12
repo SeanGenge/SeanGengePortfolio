@@ -7,10 +7,10 @@ export default function AboutMe() {
 	
 	return (
 		<Box id='about-me'>
-			<Container sx={{ marginTop: '5rem' }} className="hidden">
-				<Card className="rounded" sx={{ display: 'flex', flexDirection: 'row', position: 'relative', width: `${cardWidth}rem`, marginTop: '1em', marginBottom: '1em', marginLeft: '0.25em', marginRight: '0.25em' }}>
+			<Container sx={{ marginTop: '5rem', padding: {xs: 0} }} className="hidden">
+				<Card className="rounded" sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, position: 'relative', width: {xs: '100%', sm: `${cardWidth}rem`}, marginTop: {xs: 0, sm: '1em'}, marginBottom: { xs: 0, sm: '1em'}, marginLeft: {xs: 0, sm: '0.25em'}, marginRight: {xs: 0, sm: '0.25em'} }}>
 					<CardMedia
-						sx={{ width: "70%", height: `${cardMediaHeight}rem`, margin: '1rem' }}
+						sx={{ width: {xs: "100%", sm: "70%"}, height: `${cardMediaHeight}rem`, margin: {xs: 0, sm: '1rem'} }}
 						image={"/images/pfp.webp"}
 						title="Portrait of Sean Genge"
 						className='card-media rounded'

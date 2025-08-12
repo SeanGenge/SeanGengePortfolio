@@ -7,11 +7,11 @@ import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrow
 export default function Hero() {
 	return (
 		<section id="hero" className='section-blue'>
-			<Grid container spacing={10} sx={{minHeight: '90vh'}} className='hidden'>
-				<Grid container size={6} alignItems="center" className='hidden'>
-					<RubiksCube moves={""} />
+			<Grid container spacing={10} sx={{minHeight: '90vh', width: '100%'}} className='hidden hero-grid'>
+				<Grid container size={{ xs: 12, lg: 6 }} alignItems="center" className='hidden rubikscube__grid'>
+					<RubiksCube />
 				</Grid>
-				<Grid container size={6} spacing={4} direction="column" justifyContent="center" alignItems="center" className='hidden'>
+				<Grid container size={{ xs: 8, lg: 6 }} spacing={4} direction="column" justifyContent="center" alignItems="center" className='hidden hero-title'>
 					<Typography variant="h2">
 						Sean Genge
 					</Typography>
@@ -36,7 +36,7 @@ export default function Hero() {
 				viewBox="0 0 1440 320"
 			>
 				<path
-					fill="#072e82"  /* Your custom blue */
+					fill="#072e82"
 					fillOpacity="1"
 					d="M0,224L48,224C96,224,192,224,288,213.3C384,203,480,181,576,160C672,139,768,117,864,101.3C960,85,1056,75,1152,80C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
 				/>
