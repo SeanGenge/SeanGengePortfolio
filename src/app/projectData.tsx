@@ -9,14 +9,15 @@ export interface Project {
 }
 
 export const projectData: Project[] = [
-	// {
-	//     "name": "Wolfies",
-	//     "description": "View/search movie information",
-	//     "image": "Wolfies.webp",
-	//     "github": "https://github.com/SeanGenge/Wolfies",
-	//     "deployed": null,
-	//     "secondaryLanguages": ["React", "JavaScript", "TheMovieDB API", "HTML", "CSS", "Bootstrap", "SCSS", "Node.js"]
-	// },
+	{
+	    "name": "Wolfies",
+	    "description": "View/search movie information",
+	    "image": "Wolfies.webp",
+	    "github": "https://github.com/SeanGenge/Wolfies",
+		"deployed": "https://wolfies-xi.vercel.app/",
+		"primaryLanguages": ["next.js", "TheMovieDB API"],
+	    "secondaryLanguages": ["JavaScript", "HTML", "CSS", "Material UI"]
+	},
 	// {
 	// 	"name": "Farmers Market Organisator",
 	// 	"description": "Organize markets to rent out to stallholders or find products as a shopper",
@@ -35,15 +36,15 @@ export const projectData: Project[] = [
 		"primaryLanguages": ["JavaScript", "express", "handlebar.js"],
 		"secondaryLanguages": ["Heroku", "Handlebar.js", "HTML", "CSS", "Node.js"]
 	},
-	{
-		"name": "Movies and music db",
-		"description": "View/search movie and album information",
-		"image": "m_mDB.webp",
-		"github": "https://github.com/SeanGenge/m-mDB",
-		"deployed": "https://seangenge.github.io/m-mDB/",
-		"primaryLanguages": ["JavaScript", "TheMovieDB API"],
-		"secondaryLanguages": ["HTML", "CSS", "MaterializeCSS", "TheAudioDB API"]
-	},
+	// {
+	// 	"name": "Movies and music db",
+	// 	"description": "View/search movie and album information",
+	// 	"image": "m_mDB.webp",
+	// 	"github": "https://github.com/SeanGenge/m-mDB",
+	// 	"deployed": "https://seangenge.github.io/m-mDB/",
+	// 	"primaryLanguages": ["JavaScript", "TheMovieDB API"],
+	// 	"secondaryLanguages": ["HTML", "CSS", "MaterializeCSS", "TheAudioDB API"]
+	// },
 	{
 		"name": "Weather App",
 		"description": "View weather information on any city",

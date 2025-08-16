@@ -14,7 +14,17 @@ export default function ProjectsGrid() {
 		
 		setCurrFilter(tempFilter);
 		
-		setFilteredProjects(projectData.filter(project => project.primaryLanguages.includes(tempFilter) || project.secondaryLanguages.includes(tempFilter) || tempFilter === "All"));
+		setFilteredProjects(
+			projectData.filter((project) =>
+				project.primaryLanguages.some(
+					(lang) => lang.toLowerCase() === tempFilter.toLowerCase()
+				) ||
+				project.secondaryLanguages.some(
+					(lang) => lang.toLowerCase() === tempFilter.toLowerCase()
+				) ||
+				tempFilter.toLowerCase() === "all"
+			)
+		);
 		
 		setFirstLoad(false);
 	};
@@ -37,6 +47,7 @@ export default function ProjectsGrid() {
 				className="hidden"
 			>
 				<ToggleButton value="All">All</ToggleButton>
+				<ToggleButton value="Next.js">Next.js</ToggleButton>
 				<ToggleButton value="React">React</ToggleButton>
 				<ToggleButton value="Node.js">Node.js</ToggleButton>
 			</ToggleButtonGroup>
