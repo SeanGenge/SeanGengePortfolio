@@ -14,9 +14,6 @@ export default function Navigation() {
 				<Link href="#contact-me" underline="none">
 					<Button variant="text" color="secondary">Contact Me</Button>
 				</Link>
-				<Link href="/seangengecv.pdf" target="_blank" underline="none"sx={{marginLeft: '2em'}}>
-					<Button variant="outlined" color="secondary">Resume</Button>
-				</Link>
 			</Box>
 		</Container>
 	);
